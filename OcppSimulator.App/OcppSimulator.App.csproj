@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ocpp.Core\Ocpp.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>appicon.ico</ApplicationIcon>
+    <AssemblyTitle>OCPP 1.6 Sanal Şarj İstasyonu Simülatörü</AssemblyTitle>
+    <Product>OCPP 1.6 Sanal Şarj İstasyonu Simülatörü</Product>
+    <Company>CW Enerji</Company>
+    <Version>1.0.0</Version>
+    <AssemblyName>OcppSanalSarjSimulatoru</AssemblyName>
+  </PropertyGroup>
+
+</Project>

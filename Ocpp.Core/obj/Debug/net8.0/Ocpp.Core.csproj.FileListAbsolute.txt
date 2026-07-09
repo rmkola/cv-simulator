@@ -1,0 +1,11 @@
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\bin\Debug\net8.0\Ocpp.Core.deps.json
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\bin\Debug\net8.0\Ocpp.Core.dll
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\bin\Debug\net8.0\Ocpp.Core.pdb
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Debug\net8.0\Ocpp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Debug\net8.0\Ocpp.Core.AssemblyInfoInputs.cache
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Debug\net8.0\Ocpp.Core.AssemblyInfo.cs
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Debug\net8.0\Ocpp.Core.csproj.CoreCompileInputs.cache
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Debug\net8.0\Ocpp.Core.dll
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Debug\net8.0\refint\Ocpp.Core.dll
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Debug\net8.0\Ocpp.Core.pdb
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Debug\net8.0\ref\Ocpp.Core.dll

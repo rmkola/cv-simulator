@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Ocpp.TestServer/1.0.0": {
+        "dependencies": {
+          "Ocpp.Core": "1.0.0"
+        },
+        "runtime": {
+          "Ocpp.TestServer.dll": {}
+        }
+      },
+      "Ocpp.Core/1.0.0": {
+        "runtime": {
+          "Ocpp.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ocpp.TestServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ocpp.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,3 @@
+C:\Users\RAMAZANKOLA\source\cv-simulator\publish\OcppSimulator\OcppSanalSarjSimulatoru.pdb
+C:\Users\RAMAZANKOLA\source\cv-simulator\publish\OcppSimulator\Ocpp.Core.pdb
+C:\Users\RAMAZANKOLA\source\cv-simulator\publish\OcppSimulator\OcppSanalSarjSimulatoru.exe

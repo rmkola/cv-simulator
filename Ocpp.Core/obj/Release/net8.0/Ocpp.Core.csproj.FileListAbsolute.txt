@@ -9,3 +9,4 @@ C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\Ocpp.Core.
 C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\refint\Ocpp.Core.dll
 C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\Ocpp.Core.pdb
 C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\ref\Ocpp.Core.dll
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\Ocpp.Core.sourcelink.json

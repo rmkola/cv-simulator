@@ -475,3 +475,4 @@ C:\Users\RAMAZANKOLA\source\cv-simulator\OcppSimulator.App\obj\Release\net8.0-wi
 C:\Users\RAMAZANKOLA\source\cv-simulator\OcppSimulator.App\obj\Release\net8.0-windows\win-x64\OcppSanalSarjSimulatoru.pdb
 C:\Users\RAMAZANKOLA\source\cv-simulator\OcppSimulator.App\obj\Release\net8.0-windows\win-x64\OcppSimulator.App.genruntimeconfig.cache
 C:\Users\RAMAZANKOLA\source\cv-simulator\OcppSimulator.App\obj\Release\net8.0-windows\win-x64\ref\OcppSanalSarjSimulatoru.dll
+C:\Users\RAMAZANKOLA\source\cv-simulator\OcppSimulator.App\obj\Release\net8.0-windows\win-x64\OcppSimulator.App.sourcelink.json

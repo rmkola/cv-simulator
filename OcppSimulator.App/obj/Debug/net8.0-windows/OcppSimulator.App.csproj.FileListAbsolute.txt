@@ -16,3 +16,4 @@ C:\Users\RAMAZANKOLA\source\cv-simulator\OcppSimulator.App\obj\Debug\net8.0-wind
 C:\Users\RAMAZANKOLA\source\cv-simulator\OcppSimulator.App\obj\Debug\net8.0-windows\refint\OcppSanalSarjSimulatoru.dll
 C:\Users\RAMAZANKOLA\source\cv-simulator\OcppSimulator.App\obj\Debug\net8.0-windows\OcppSanalSarjSimulatoru.pdb
 C:\Users\RAMAZANKOLA\source\cv-simulator\OcppSimulator.App\obj\Debug\net8.0-windows\ref\OcppSanalSarjSimulatoru.dll
+C:\Users\RAMAZANKOLA\source\cv-simulator\OcppSimulator.App\obj\Debug\net8.0-windows\OcppSimulator.App.sourcelink.json

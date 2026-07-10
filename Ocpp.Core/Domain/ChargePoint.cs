@@ -218,8 +218,6 @@ public sealed partial class ChargePoint : IAsyncDisposable
             return;
         }
 
-        await SetConnectorStatusAsync(c, ChargePointStatus.Finishing).ConfigureAwait(false);
-
         var meterStop = (int)Math.Round(c.MeterWh);
         tx.MeterStop = meterStop;
         tx.StopTime = DateTimeOffset.UtcNow;
@@ -232,6 +230,8 @@ public sealed partial class ChargePoint : IAsyncDisposable
             Timestamp = tx.StopTime.Value,
             Reason = reason,
         };
+        // Per the requested flow, StopTransaction is sent first; the connector only reports its new
+        // status (e.g. Finishing) afterwards — no StatusNotification is emitted before StopTransaction.
         await _client.CallAsync<StopTransactionResponse>(OcppAction.StopTransaction, req, ct: ct).ConfigureAwait(false);
 
         c.ActiveTransaction = null;

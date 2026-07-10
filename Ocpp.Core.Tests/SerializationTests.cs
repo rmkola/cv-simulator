@@ -39,6 +39,24 @@ public class SerializationTests
     }
 
     [Fact]
+    public void Timestamp_SerializesAsUtcZWithMilliseconds()
+    {
+        var req = new StartTransactionRequest
+        {
+            ConnectorId = 1,
+            IdTag = "XYCJWMCTRCJ",
+            MeterStart = 0,
+            Timestamp = new DateTimeOffset(2026, 7, 10, 8, 34, 52, 13, TimeSpan.FromHours(3)), // 05:34:52.013 UTC
+        };
+
+        var node = Node(req);
+        var ts = node["timestamp"]!.GetValue<string>();
+
+        Assert.Equal("2026-07-10T05:34:52.013Z", ts);
+        Assert.Matches(@"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$", ts);
+    }
+
+    [Fact]
     public void KeyValue_SerializesReadonlyFieldLowercase()
     {
         var node = Node(new KeyValue { Key = "HeartbeatInterval", Readonly = false, Value = "300" });

@@ -84,6 +84,36 @@ public sealed class IntegrationTests : IAsyncLifetime
     }
 
     [Fact]
+    public async Task StartTransaction_Timestamp_IsUtc_NotLocalOffset()
+    {
+        await using var cp = NewChargePoint();
+
+        // Capture the raw outgoing StartTransaction frame.
+        string? startRaw = null;
+        cp.Log += e =>
+        {
+            if (e is { Direction: LogDirection.Outgoing, Action: OcppAction.StartTransaction })
+                startRaw = e.Raw;
+        };
+
+        await cp.ConnectAsync();
+        Assert.True(await WaitFor(() => cp.LastBootStatus == RegistrationStatus.Accepted));
+
+        var beforeUtc = DateTimeOffset.UtcNow;
+        await cp.StartTransactionAsync(1, "TAG-1");
+        var afterUtc = DateTimeOffset.UtcNow;
+
+        Assert.NotNull(startRaw);
+        var payload = OcppJson.ParseFrame(startRaw!).Payload!;
+        var sent = payload["timestamp"]!.GetValue<DateTimeOffset>();
+
+        // The sent instant must equal current UTC (±1 min), i.e. NOT shifted by a local offset (e.g. +3h).
+        Assert.InRange(sent.ToUniversalTime(),
+            beforeUtc.AddMinutes(-1), afterUtc.AddMinutes(1));
+        Assert.Equal(TimeSpan.Zero, sent.Offset); // serialized as UTC (+00:00)
+    }
+
+    [Fact]
     public async Task StopTransaction_StaysFinishing_UntilUnplugged()
     {
         await using var cp = NewChargePoint();

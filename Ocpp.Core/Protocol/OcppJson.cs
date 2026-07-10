@@ -24,6 +24,8 @@ public static class OcppJson
             DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
             WriteIndented = indented,
         };
+        // Emit timestamps as UTC with millisecond precision and a 'Z' suffix (e.g. 2026-07-10T05:34:52.013Z).
+        o.Converters.Add(new UtcDateTimeOffsetConverter());
         o.Converters.Add(new EnumMemberJsonConverterFactory());
         return o;
     }

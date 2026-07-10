@@ -100,3 +100,4 @@ C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core.Tests\obj\Debug\net8.0\refint
 C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core.Tests\obj\Debug\net8.0\Ocpp.Core.Tests.pdb
 C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core.Tests\obj\Debug\net8.0\Ocpp.Core.Tests.genruntimeconfig.cache
 C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core.Tests\obj\Debug\net8.0\ref\Ocpp.Core.Tests.dll
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core.Tests\obj\Debug\net8.0\Ocpp.Core.Tests.sourcelink.json

@@ -54,10 +54,14 @@ else
   echo "iconutil not found; skipping .icns (app still runs, uses window icon at runtime)."
 fi
 
-# 4) Clear the quarantine flag so Gatekeeper doesn't block the unsigned app
+# 4) Ad-hoc sign. Apple Silicon refuses to launch any unsigned binary, and a
+#    bundle assembled by copying files has no signature of its own.
+codesign --force --deep --sign - "$APP"
+
+# 5) Clear the quarantine flag so Gatekeeper doesn't block the unsigned app
 xattr -dr com.apple.quarantine "$APP" 2>/dev/null || true
 
-# 5) Build a compressed .dmg with a drag-to-Applications shortcut
+# 6) Build a compressed .dmg with a drag-to-Applications shortcut
 DMG="publish/${APP_NAME}-1.0.0-${RID}.dmg"
 STAGING="$(mktemp -d)/dmg"
 mkdir -p "$STAGING"

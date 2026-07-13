@@ -1,0 +1,4 @@
+* text=auto
+
+# Must stay LF or bash on the macOS runner won't execute it.
+*.sh text eol=lf

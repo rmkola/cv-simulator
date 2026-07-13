@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CW Enerji")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5bb930f882d19319eabe6f3d0608713c0ad33498")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+199c61950adfae02355d782bcef709740a4f362a")]
 [assembly: System.Reflection.AssemblyProductAttribute("OCPP 1.6 Sanal Şarj İstasyonu Simülatörü")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OCPP 1.6 Sanal Şarj İstasyonu Simülatörü")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

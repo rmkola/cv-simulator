@@ -1,0 +1,12 @@
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\bin\Release\net8.0\osx-arm64\Ocpp.Core.deps.json
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\bin\Release\net8.0\osx-arm64\Ocpp.Core.dll
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\bin\Release\net8.0\osx-arm64\Ocpp.Core.pdb
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\osx-arm64\Ocpp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\osx-arm64\Ocpp.Core.AssemblyInfoInputs.cache
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\osx-arm64\Ocpp.Core.AssemblyInfo.cs
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\osx-arm64\Ocpp.Core.csproj.CoreCompileInputs.cache
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\osx-arm64\Ocpp.Core.sourcelink.json
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\osx-arm64\Ocpp.Core.dll
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\osx-arm64\refint\Ocpp.Core.dll
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\osx-arm64\Ocpp.Core.pdb
+C:\Users\RAMAZANKOLA\source\cv-simulator\Ocpp.Core\obj\Release\net8.0\osx-arm64\ref\Ocpp.Core.dll

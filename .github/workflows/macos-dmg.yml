@@ -1,0 +1,45 @@
+name: macOS DMG (arm64)
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    # macos-14 and newer are Apple Silicon runners.
+    runs-on: macos-14
+    permissions:
+      contents: write   # needed to attach the DMG to a release
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Build .app and .dmg
+        run: |
+          chmod +x package-macos.sh
+          ./package-macos.sh osx-arm64
+
+      - name: Verify the bundle
+        run: |
+          codesign --verify --verbose publish/OcppSimulator.app
+          hdiutil verify publish/OcppSimulator-1.0.0-osx-arm64.dmg
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OcppSimulator-osx-arm64-dmg
+          path: publish/*.dmg
+          if-no-files-found: error
+
+      - name: Attach DMG to the release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: publish/*.dmg

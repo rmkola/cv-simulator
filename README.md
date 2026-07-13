@@ -10,15 +10,16 @@ Smart Charging, Remote Trigger.
 
 | Proje | Açıklama |
 |-------|----------|
-| `Ocpp.Core` | Protokol, mesaj/tip modelleri, `ChargePoint` durum makinesi (UI'dan bağımsız). |
-| `OcppSimulator.App` | WinForms arayüzü (9 sekme). |
+| `Ocpp.Core` | Protokol, mesaj/tip modelleri, `ChargePoint` durum makinesi (platformdan bağımsız). |
+| `OcppSimulator.App` | WinForms arayüzü (9 sekme) — yalnızca Windows. |
+| `OcppSimulator.Mac` | Avalonia arayüzü (9 sekme) — macOS / Linux / Windows. |
 | `Ocpp.TestServer` | Geliştirme için minimal yerel CSMS (konsol). |
-| `Ocpp.Core.Tests` | xUnit birim + uçtan uca entegrasyon testleri (26 test). |
+| `Ocpp.Core.Tests` | xUnit birim + uçtan uca entegrasyon testleri (29 test). |
 
 ## Gereksinimler
 
-- .NET 8 SDK (veya üzeri) — proje `net8.0` / `net8.0-windows` hedefler.
-- Windows (WinForms).
+- .NET 8 SDK (veya üzeri) — `Ocpp.Core` ve Avalonia projesi `net8.0`, WinForms `net8.0-windows` hedefler.
+- WinForms arayüzü için Windows; `OcppSimulator.Mac` (Avalonia) için macOS / Linux / Windows.
 
 ## Derleme ve Çalıştırma
 
@@ -53,6 +54,39 @@ Hazır paket ayrıca `publish/OcppSanalSarjSimulatoru-v1.0.0-win-x64.zip` olarak
 
 Uygulama simgesi (`OcppSimulator.App/appicon.ico`) yeşil bir şarj istasyonu olup üzerinde
 **SANAL** bandı bulunur; böylece gerçek bir istasyon değil, simülatör olduğu görsel olarak bellidir.
+
+## macOS (ve Linux) Sürümü — Avalonia
+
+WinForms yalnızca Windows'ta çalışır. Çapraz platform sürüm için **`OcppSimulator.Mac`**
+projesi (Avalonia UI) aynı `Ocpp.Core`'u kullanır ve macOS / Linux / Windows'ta çalışır.
+Tüm protokol/durum mantığı ortaktır; yalnızca arayüz farklıdır.
+
+Çalıştırma (herhangi bir platform):
+```bash
+dotnet run --project OcppSimulator.Mac
+```
+
+**macOS için `.app` + `.dmg` paketi** (bir Mac üzerinde, .NET 8 SDK kurulu olmalı):
+```bash
+chmod +x package-macos.sh
+./package-macos.sh            # Mac'in kendi mimarisi (Apple Silicon / Intel) otomatik
+# ./package-macos.sh osx-x64  # Intel'e zorla
+```
+Çıktılar:
+- `publish/OcppSimulator.app` — Finder'da çift tıkla / `/Applications`'a sürükle
+- `publish/OcppSimulator-1.0.0-osx-arm64.dmg` — sürükle-bırak kurulumlu, sıkıştırılmış DMG
+
+Script; self-contained publish yapar, `.app` yapısını kurar, PNG'den `.icns` ikon üretir,
+çalıştırma iznini verir, Gatekeeper quarantine bayrağını temizler ve `.dmg` oluşturur.
+
+> İmzasız uygulama olduğu için ilk açılışta uyarı çıkarsa: **sağ tık → Aç**, ya da
+> `xattr -dr com.apple.quarantine /Applications/OcppSimulator.app`.
+
+Windows'tan macOS ikili dosyaları da üretilebilir (test edilemez ama derlenir):
+```bash
+dotnet publish OcppSimulator.Mac -c Release -r osx-arm64 --self-contained -o publish/mac-arm64
+dotnet publish OcppSimulator.Mac -c Release -r osx-x64   --self-contained -o publish/mac-x64
+```
 
 ## Arayüz Sekmeleri
 

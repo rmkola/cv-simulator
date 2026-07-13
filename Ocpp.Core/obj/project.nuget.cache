@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VqvuG5zD7J8=",
+  "dgSpecHash": "rxAud7wtoNE=",
   "success": true,
   "projectFilePath": "C:\\Users\\RAMAZANKOLA\\source\\cv-simulator\\Ocpp.Core\\Ocpp.Core.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\RAMAZANKOLA\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.22\\microsoft.net.illink.tasks.8.0.22.nupkg.sha512",
-    "C:\\Users\\RAMAZANKOLA\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.22\\microsoft.netcore.app.runtime.win-x64.8.0.22.nupkg.sha512",
-    "C:\\Users\\RAMAZANKOLA\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.22\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.22.nupkg.sha512",
-    "C:\\Users\\RAMAZANKOLA\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.22\\microsoft.aspnetcore.app.runtime.win-x64.8.0.22.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
